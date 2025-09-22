@@ -1,5 +1,10 @@
 [
   {
+    "type": "assignment",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "expression",
     "named": true,
     "fields": {},
@@ -94,16 +99,8 @@
         "required": true,
         "types": [
           {
-            "type": "::=",
-            "named": false
-          },
-          {
-            "type": ":=",
-            "named": false
-          },
-          {
-            "type": "=",
-            "named": false
+            "type": "assignment",
+            "named": true
           }
         ]
       },

@@ -24,21 +24,8 @@
           "type": "FIELD",
           "name": "assignment",
           "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "STRING",
-                "value": "="
-              },
-              {
-                "type": "STRING",
-                "value": "::="
-              },
-              {
-                "type": "STRING",
-                "value": ":="
-              }
-            ]
+            "type": "SYMBOL",
+            "name": "assignment"
           }
         },
         {
@@ -60,6 +47,23 @@
               "type": "BLANK"
             }
           ]
+        }
+      ]
+    },
+    "assignment": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "STRING",
+          "value": "::="
+        },
+        {
+          "type": "STRING",
+          "value": ":="
         }
       ]
     },

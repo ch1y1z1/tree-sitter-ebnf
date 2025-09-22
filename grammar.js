@@ -20,10 +20,12 @@ module.exports = grammar({
     rule: ($) =>
       seq(
         field("name", $.identifier),
-        field("assignment", choice("=", "::=", ":=")),
+        field("assignment", $.assignment),
         field("value", $.expression),
         optional(";"), // 兼容末尾分号可选
       ),
+
+    assignment: ($) => choice("=", "::=", ":="),
 
     // expression ::= sequence ('|' sequence)*
     expression: ($) => seq($.sequence, repeat(seq("|", $.sequence))),
